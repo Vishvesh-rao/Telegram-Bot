@@ -19,7 +19,7 @@ def LoadBrowser():                        #--------- Loads mozilla firefox brows
 	pyautogui.moveTo(1319,79)
 	pyautogui.click()
 
-def OpenGmail():						  #--------- Opens Gmail from favouraites list
+def OpenGmail():			  #--------- Opens Gmail from favouraites list
 
 	pageLoad = pyautogui.pixelMatchesColor(900,618,(16,39,65))
 
