@@ -67,7 +67,7 @@ def MailContent():						  #-------- Edit this funtion according to what you want
 	pyautogui.write('Tasks Done,\n', interval = 0.1)
 
 	pyautogui.hotkey('ctrl','shift','8') 
-	pyautogui.write('Went through Pohligg\nPlayed pwn2win ctf\n\n\n',interval = 0.1)
+	pyautogui.write(' Write the content and use "\n" between sentences to make into points ',interval = 0.1)
 	pyautogui.hotkey('ctrl','shift','8') 
 
 def sendMail():							 #--------- Sends email
@@ -86,9 +86,9 @@ def closeGmail():						 #--------- closes the rightmost tab
 
 ##### bot data #####
 
-bot = telebot.TeleBot("1237217742:AAHI4-pmTZRIqTt8CSUZbipHFuj1QMnsQdk")
-url = 'https://api.telegram.org/bot1237217742:AAHI4-pmTZRIqTt8CSUZbipHFuj1QMnsQdk/sendMessage'
-YOUR_CHAT_ID = 972187028
+bot = telebot.TeleBot(INPUT_YOUR_BOT_API_KEY)
+url = 'https://api.telegram.org/bot{YOUR_BOT_API_KEY}/sendMessage'
+YOUR_CHAT_ID =  #INPUT YOUR CHAT ID
 
 #-------------------#
 
@@ -118,7 +118,7 @@ def echo_all(message):
 		bot.reply_to(message,"opened gmail")
 
 	if message.text == 'Send update':
-		ThreadName = "Crypto"
+		ThreadName = Mail_id_you_want_to_search_for
 
 		LoadBrowser()
 		OpenGmail()
@@ -130,35 +130,22 @@ def echo_all(message):
 		MailContent()
 		sendMail()
 
-		bot.reply_to(message,"""Hey Vish your update has been sent!!\nHope you had a productive day!! :)""")
+		bot.reply_to(message,"""Your update has been sent!!\nHope you had a productive day!! :)""")
 
-
-	if message.text == 'Open thread':
-		ThreadName = "Crypto"
-
-		LoadBrowser()
-		OpenGmail()
-		openMailThread(ThreadName)
-		
-		bot.reply_to(message,"Opened thread!")
-
-		doReplyAll()
-		
-		SendMesg('')
-
+############## Random stuff ##############
 
 	if message.text == 'Refresh':
 		pyautogui.hotkey('ctrl','r')
 	
 	if message.text == 'Thanks Dustin' or message.text == 'Thakns':
-		bot.reply_to(message,'Just doin my job vish! :D')
+		bot.reply_to(message,'Just doin my job!! :D')
 
 	if message.text == "Close tab":
 		closeGmail()
 		bot.reply_to(message,"Closed tab")
 	
 	if message.text == "Hello" or message.text == "Hey":
-		bot.reply_to(message,"Howdy, Vish how are you doing?")
+		bot.reply_to(message,"Howdy, how are you doing?")
 	
 	if message.text == 'Sleep':
 		bot.reply_to(message,'Laptop has been locked!')
