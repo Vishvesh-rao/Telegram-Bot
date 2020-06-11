@@ -1,5 +1,5 @@
 ####################################################
-	############ Imporetd Modules ############
+    ############ Imporetd Modules ############
 
 import telebot
 import requests
@@ -91,15 +91,14 @@ def doReplyAll():                         #-------- sets reply mode to reply all
 
 def MailContent():						  #-------- Edit this funtion according to what you want as mail content
 
-	pyautogui.write("Namah Shivaya\n\n", interval = 0.2)
+	pyautogui.write()
 	
-	pyautogui.hotkey('ctrl','b')
-	pyautogui.write('Today I,\n', interval = 0.1)
+	pyautogui.hotkey('ctrl','b')	#---- To make tex bold
+	pyautogui.write()
 
-	pyautogui.hotkey('ctrl','shift','8')
 	pyautogui.hotkey('ctrl','b')
 
-	pyautogui.write('Read about the Sieve of Eratosthenes\nImplementing prime no. generation using Sieve of Eratosthenes\nLeant about fermats and Mersenne primes as part of Discrete math course',interval = 0.05)
+	pyautogui.write()
 	pyautogui.hotkey('ctrl','shift','8') 
 
 #_________________________________________
@@ -170,7 +169,7 @@ def rerply_to(message):
 		MailContent()
 		sendMail()
 
-		bot.reply_to(message,"""Hey Vish your update has been sent!!\nHope you had a productive day!! :)""")
+		bot.reply_to(message,"""Hey your mail has been sent!! :)""")
 
 #_______________________________________
 
@@ -197,14 +196,14 @@ def rerply_to(message):
 		pyautogui.hotkey('ctrl','r')
 #_______________________________________			
 	if message.text == 'Thanks Dustin' or message.text == 'Thakns':
-		bot.reply_to(message,'Just doin my job vish! :D')
+		bot.reply_to(message,'Just doin my job! :D')
 #_______________________________________
 	if message.text == "Close tab":
 		closeGmail()
 		bot.reply_to(message,"Closed tab")
 #_______________________________________			
 	if message.text == "Hello" or message.text == "Hey":
-		bot.reply_to(message,"Howdy, Vish how are you doing?")
+		bot.reply_to(message,"Howdy,how are you doing?")
 #_______________________________________			
 	if message.text == 'Sleep':
 		bot.reply_to(message,'Laptop has been locked!')
