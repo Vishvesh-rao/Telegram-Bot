@@ -124,7 +124,7 @@ def closeGmail():						 #--------- closes the curently open tab
 
 ##### bot data #####
 
-bot = telebot.TeleBot("1237217742:AAHI4-pmTZRIqTt8CSUZbipHFuj1QMnsQdk")
+bot = telebot.TeleBot("YOUR_BOT_TOKEN/API")
 url = 'https://api.telegram.org/bot1237217742:AAHI4-pmTZRIqTt8CSUZbipHFuj1QMnsQdk/sendMessage'
 YOUR_CHAT_ID = 972187028
 
